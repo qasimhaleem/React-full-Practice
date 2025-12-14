@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import FormiYup from './fcomponents/Forms/FormiYup'
+import Lazy from './fcomponents/Lazy-loading/App'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FormiYup />
+    <Lazy />
   </StrictMode>,
 )
