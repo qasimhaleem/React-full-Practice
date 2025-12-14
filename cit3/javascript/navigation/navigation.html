@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+</head>
+<body>
+    <button onclick="getCoords()">Get Coordinates</button>
+    <div id="coords"></div>
+    <script>
+        const getCoords = () => {
+            navigator.geolocation.getCurrentPosition((position) => {
+            const coords = document.createElement("div")
+            coords.innerHTML = `Latitude: ${position.coords.latitude}<br>Longitude: ${position.coords.longitude}`
+            document.querySelector("#coords").appendChild(coords)
+
+
+            fetch(`https://us1.locationiq.com/v1/reverse.php?key=pk.2ce05a50d1ca31e503b2a60e82d6a395&lat=${position.coords.latitude}&lon=${position.coords.longitude}&format=json`)
+                .then(res => res.json())
+                .then(json =>{
+                    // console.log(json)
+                    const address = document.createElement("div")
+                    address.innerHTML = `Address: ${json.display_name}`
+                    document.querySelector("#coords").appendChild(address)
+                })
+            
+            })
+    }
+    </script>
+</body>
+</html>
