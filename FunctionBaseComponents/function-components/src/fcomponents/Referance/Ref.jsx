@@ -4,12 +4,12 @@ const Ref = () => {
     const RefrenceRef = useRef(0);
     const handleCli = () => {
         RefrenceRef.current = RefrenceRef.current + 1;
-        console.log(RefrenceRef)
+        console.log(RefrenceRef.current)
     }
+    console.log("i rendered")
     return (
         <div>
-            <p>This is your counter</p>
-            <h1>{RefrenceRef.current}</h1>
+            <p>Open the console there i increamented</p>
             <button onClick={handleCli}>Increament</button>
         </div>
     )
