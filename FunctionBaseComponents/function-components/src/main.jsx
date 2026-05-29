@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Ref from './fcomponents/Referance/Ref'
+import { BrowserRouter } from 'react-router-dom'
+import Navbar from './fcomponents/navbar/navbar'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Ref />
+    <BrowserRouter>
+      <Navbar />
+    </BrowserRouter>
   </StrictMode>,
 )

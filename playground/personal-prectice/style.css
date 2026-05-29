@@ -1,0 +1,47 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+}
+header img{
+    height: 50px;
+    float: left;
+}
+header div span#title{
+    float: left ;
+    font-weight: bold;
+    font-size: 1   40px;
+    padding-top: 10px;
+    padding-left: 15px;
+    position: relative;
+}
+header div span#slogan{
+    clear: both;
+    float: left;
+    padding-left: 100px;
+    top: -20px;
+    position: relative;
+}
+
+
+header div#search{
+    float: right;
+    position: relative;
+    top: -30px;
+    padding-right: 15px;
+    
+}
+
+header div#search input#namefiled{
+    padding-right: 3px;
+}
+header div#search input#btn-search{
+    position: relative;
+    float: right;
+    padding-right: 3px;
+}

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: gray;
+    text-align: center;
+    margin-top: 18%;
+    font-size: 50px;
+}
+.screen{
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 100px;
+}
+.text{
+    font-size: 40px;
+    font-weight: 14px;
+    font-style: none;
+    border-radius: 10px;
+}
